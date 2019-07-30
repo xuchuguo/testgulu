@@ -1,0 +1,48 @@
+{
+  "name": "gulu-test",
+  "version": "0.0.1",
+  "description": "vue UI",
+  "main": "index.js",
+  "scripts": {
+    "dev-test": "parcel watch test/* --no-cache & karma start",
+    "test": "parcel build test/* --no-minify && karma start --single-run"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xuchuguo/testgulu.git"
+  },
+  "keywords": [
+    "vue",
+    "UI"
+  ],
+  "author": "xuchuguo",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/xuchuguo/testgulu/issues"
+  },
+  "homepage": "https://github.com/xuchuguo/testgulu#readme",
+  "dependencies": {
+    "vue": "^2.6.10",
+    "vue-hot-reload-api": "^2.3.3"
+  },
+  "devDependencies": {
+    "@vue/component-compiler-utils": "^3.0.0",
+    "chai": "^4.2.0",
+    "chai-spies": "^1.0.0",
+    "karma": "^4.2.0",
+    "karma-chai": "^0.1.0",
+    "karma-chai-spies": "^0.1.4",
+    "karma-chrome-launcher": "^3.0.0",
+    "karma-mocha": "^1.3.0",
+    "karma-sinon-chai": "^2.0.2",
+    "mocha": "^6.2.0",
+    "parcel-bundler": "^1.12.3",
+    "sass": "^1.22.7",
+    "sinon": "^7.3.2",
+    "sinon-chai": "^3.3.0",
+    "vue-template-compiler": "^2.6.10"
+  },
+  "alias": {
+    "vue": "./node_modules/vue/dist/vue.common.js"
+  }
+}
