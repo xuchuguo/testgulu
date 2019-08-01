@@ -1,6 +1,6 @@
 {
   "name": "gulu-xcg",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "vue UI",
   "main": "dist/index.js",
   "scripts": {
