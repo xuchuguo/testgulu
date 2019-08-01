@@ -14,7 +14,7 @@ IE 8 及以上浏览器支持此样式。
 ## 引入 
 
 ``` js
-import { Button } from ''
+import { Button } from 'gulu-xcg'
 import '/dist/index.css'
 
 export default {

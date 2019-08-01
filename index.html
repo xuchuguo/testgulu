@@ -33,35 +33,7 @@
 </head>
 <body>
 <div id="app">
-  <div class="box">
-    <x-input v-model="message"></x-input>
-    <button @click="message+=1">+1</button>
-  </div>
-  <div class="box">
-    <x-button :loading="loading1" @click="loading1 = !loading1">
-      按钮
-    </x-button>
-    <x-button icon="settings" :loading="loading2"
-              @click="loading2 = !loading2">
-      按钮
-    </x-button>
-    <x-button icon="settings" icon-position="right" :loading="loading3"
-              @click="loading3 = !loading3">
-      按钮
-    </x-button>
-    <x-button-group>
-      <x-button icon="left">上一页</x-button>
-      <x-button>更多</x-button>
-      <x-button icon="right" icon-position="right">下一页</x-button>
-    </x-button-group>
-  </div>
-  <x-row gutter="20">
-    <x-col span="12"></x-col>
-    <x-col span="12"></x-col>
-  </x-row>
-  <button @click="showToast1">top</button>
-  <button @click="showToast2">middle</button>
-  <button @click="showToast3">bottom</button>
+
 </div>
 <script src="./src/app.js"></script>
 </body>

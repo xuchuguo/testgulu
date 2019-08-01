@@ -6,12 +6,13 @@
 </template>
 <script>
     export default {
-        name: "TabsBody",
+        name: 'GuluTabsBody',
         inject: ['eventBus'],
         created(){
         }
     }
 </script>
-<style scoped>
-    .tabs-body {}
+<style>
+    .tabs-body {
+    }
 </style>

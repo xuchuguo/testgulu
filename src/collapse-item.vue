@@ -1,81 +1,60 @@
 <template>
-    <div class="x-collapse-item">
-        <div class="x-title" @click="toggle">
-            {{title}}
-        </div>
-        <div class="x-content" v-if="open">
-            <slot></slot>
-        </div>
+    <div class="collapse">
+        <slot></slot>
     </div>
 </template>
 
 <script>
+    import Vue from 'vue'
     export default {
-        name: "CollapseItem",
+        name: "GuluCollapse",
         props: {
-            title: {
-                type: String,
-                required: true
+            single: {
+                type: Boolean,
+                default: false
             },
-            name: {
-                type: String,
-                required: true
+            selected: {
+                type: Array,
             }
         },
-        data() {
+        data () {
             return {
-                open: false
+                eventBus: new Vue(),
             }
         },
-        inject: ['eventBus'],
-        mounted() {
-            this.eventBus && this.eventBus.$on('update:selected', (names) => {
-                if (names.indexOf(this.name) >= 0) {
-                    this.open = true
+        provide () {
+            return {
+                eventBus: this.eventBus
+            }
+        },
+        mounted () {
+            this.eventBus.$emit('update:selected', this.selected)
+            this.eventBus.$on('update:addSelected', (name) => {
+                let selectedCopy = JSON.parse(JSON.stringify(this.selected))
+                if (this.single) {
+                    selectedCopy = [name]
                 } else {
-                    this.open = false
+                    selectedCopy.push(name)
                 }
+                this.eventBus.$emit('update:selected', selectedCopy)
+                this.$emit('update:selected', selectedCopy)
             })
-        },
-        methods: {
-            toggle() {
-                if (this.open) {
-                    this.eventBus && this.eventBus.$emit('update:removeselected', this.name)
-                } else {
-                    this.eventBus && this.eventBus.$emit('update:addselected', this.name)
-                }
-            }
+            this.eventBus.$on('update:removeSelected', (name) => {
+                let selectedCopy = JSON.parse(JSON.stringify(this.selected))
+                let index = selectedCopy.indexOf(name)
+                selectedCopy.splice(index, 1)
+                this.eventBus.$emit('update:selected', selectedCopy)
+                this.$emit('update:selected', selectedCopy)
+            })
         }
     }
 </script>
 
 <style scoped lang="scss">
-    $border-color: #ddd;
+    $grey: #ddd;
     $border-radius: 4px;
-    .x-collapse-item {
-        > .w-title {
-            background: lightskyblue;
-            border: 1px solid $border-color;
-            margin: -1px;
-            line-height: 32px;
-            padding: 0 8px;
-            display: flex;
-            align-items: center;
-        }
-        &:first-child {
-            .x-title {
-                border-top-left-radius: $border-radius;
-                border-top-right-radius: $border-radius;
-            }
-        }
-        &:last-child {
-            > .x-title:last-child {
-                border-bottom-left-radius: $border-radius;
-                border-bottom-right-radius: $border-radius;
-            }
-        }
-        > .x-content {
-            padding: 8px;
-        }
+    .collapse {
+        border: 1px solid $grey;
+        border-radius: $border-radius;
     }
 </style>

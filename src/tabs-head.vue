@@ -1,5 +1,5 @@
 <template>
-    <div class="tabs-head" ref="head">
+    <div class="tabs-head">
         <slot></slot>
         <div class="line" ref="line"></div>
         <div class="actions-wrapper">
@@ -9,45 +9,39 @@
 </template>
 <script>
     export default {
-        name: "TabsHead",
+        name: 'GuluTabsHead',
         inject: ['eventBus'],
-        mounted() {
+        mounted () {
             this.eventBus.$on('update:selected', (item, vm) => {
-                this.updateLinePosition(vm)
-            })
-        },
-        methods: {
-            updateLinePosition (selectedVm) {
-                let {width, left} = selectedVm.$el.getBoundingClientRect()
-                let {left: left2} = this.$refs.head.getBoundingClientRect()
+                let {width, height, top, left} = vm.$el.getBoundingClientRect()
                 this.$refs.line.style.width = `${width}px`
-                this.$refs.line.style.left = `${left - left2}px`
-            }
+                this.$refs.line.style.left = `${left}px`
+            })
         }
     }
 </script>
 <style scoped lang="scss">
-    $tabs-height: 40px;
-    $color: #4A90E2;
+    $tab-height: 40px;
+    $blue: blue;
     $border-color: #ddd;
-    * {margin: 0;padding: 0;box-sizing: border-box}
     .tabs-head {
         display: flex;
-        height: $tabs-height;
+        height: $tab-height;
         justify-content: flex-start;
         position: relative;
         border-bottom: 1px solid $border-color;
         > .line {
             position: absolute;
             bottom: 0;
-            border-bottom: 2px solid $color;
-            transition: all 300ms;
+            border-bottom: 1px solid $blue;
+            transition: all 350ms;
         }
         > .actions-wrapper {
             margin-left: auto;
             display: flex;
-            justify-content: center;
             align-items: center;
+            justify-content: center;
             padding: 0 1em;
         }
     }
+</style>

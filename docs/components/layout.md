@@ -71,9 +71,9 @@ title: Layout 布局
         <x-header style="height: 50px; background:lightskyblue;">
             header
         </x-header>
-        <x-content style="height: 100px; background:deepskyblue;">
+        <xcontent style="height: 100px; background:deepskyblue;">
             content
-        </x-content>
+        </xcontent>
         <x-footer style="height: 50px; background:lightskyblue;">
             footer
         </x-footer>

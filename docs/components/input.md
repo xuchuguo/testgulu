@@ -14,10 +14,12 @@ title: Input 输入框
 #### 代码
 
 ``` html
+
 <x-input value="中文"></x-input>
 <x-input value="中文" readonly></x-input>
 <x-input value="中文" disabled></x-input>
 <x-input value="中文" error="错误"></x-input>
+
 ```
 ## 支持双向绑定
 

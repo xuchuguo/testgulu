@@ -6,9 +6,9 @@
 </template>
 <script>
     export default {
-        name: "TabsItem",
+        name: 'GuluTabsItem',
         inject: ['eventBus'],
-        data() {
+        data () {
             return {
                 active: false
             }
@@ -24,14 +24,14 @@
             }
         },
         computed: {
-            classes() {
+            classes () {
                 return {
                     active: this.active,
                     disabled: this.disabled
                 }
             }
         },
-        created() {
+        created () {
             if (this.eventBus) {
                 this.eventBus.$on('update:selected', (name) => {
                     this.active = name === this.name;
@@ -39,7 +39,7 @@
             }
         },
         methods: {
-            onClick() {
+            onClick () {
                 if (this.disabled) { return }
                 this.eventBus && this.eventBus.$emit('update:selected', this.name, this)
                 this.$emit('click', this)
@@ -47,24 +47,23 @@
         }
     }
 </script>
-<style scoped lang="scss">
-    $active-color: #4A90E2;
-    $font-family: PingFangSC-Regular;
-    $disabled-text-color: gray;
+<style lang="scss" scoped>
+    $blue: blue;
+    $disabled-text-color: grey;
     .tabs-item {
         flex-shrink: 0;
         padding: 0 1em;
+        cursor: pointer;
         height: 100%;
-        font-family: $font-family;
         display: flex;
         align-items: center;
-        cursor: pointer;
         &.active {
-            color: $active-color;
+            color: $blue;
+            font-weight: bold;
         }
         &.disabled {
             color: $disabled-text-color;
-            cursor: default;
+            cursor: not-allowed;
         }
     }
 </style>

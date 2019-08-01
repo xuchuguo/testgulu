@@ -1,3 +1,4 @@
+
 <template>
     <div class="col" :class="colClass" :style="colStyle">
         <slot></slot>
@@ -134,3 +135,4 @@
             }
         }
     }
+</style>

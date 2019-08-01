@@ -87,28 +87,28 @@ Grid - 网格，最多可分为24小格，可设置 gutter 和空白，默认支
 
 #### 代码
 ```html
-<w-row class="demoRow" gutter="10">
-    <w-col span="8"><div class="demoCol">8</div></w-col>
-    <w-col span="8" offset="8"><div class="demoCol">8</div></w-col>
-</w-row>
-<w-row class="demoRow" gutter="10">
-    <w-col span="6" offset="6"><div class="demoCol">6</div></w-col>
-    <w-col span="6" offset="6"><div class="demoCol">6</div></w-col>
-</w-row>
-<w-row class="demoRow" gutter="10">
-    <w-col span="4"><div class="demoCol">4</div></w-col>
-    <w-col span="4" offset="4"><div class="demoCol">4</div></w-col>
-    <w-col span="4" offset="8"><div class="demoCol">4</div></w-col>
-</w-row>
-<w-row class="demoRow" gutter="10">
-    <w-col span="2"><div class="demoCol">2</div></w-col>
-    <w-col span="2" offset="2"><div class="demoCol">2</div></w-col>
-    <w-col span="2"><div class="demoCol">2</div></w-col>
-    <w-col span="2" offset="2"><div class="demoCol">2</div></w-col>
-    <w-col span="2"><div class="demoCol">2</div></w-col>
-    <w-col span="2" offset="2"><div class="demoCol">2</div></w-col>
-    <w-col span="2"><div class="demoCol">2</div></w-col>
-    <w-col span="2" offset="2"><div class="demoCol">2</div></w-col>
-</w-row>
-</w-row>
+<x-row class="demoRow" gutter="10">
+    <x-col span="8"><div class="demoCol">8</div></x-col>
+    <x-col span="8" offset="8"><div class="demoCol">8</div></x-col>
+</x-row>
+<x-row class="demoRow" gutter="10">
+    <x-col span="6" offset="6"><div class="demoCol">6</div></x-col>
+    <x-col span="6" offset="6"><div class="demoCol">6</div></x-col>
+</x-row>
+<x-row class="demoRow" gutter="10">
+    <x-col span="4"><div class="demoCol">4</div></x-col>
+    <x-col span="4" offset="4"><div class="demoCol">4</div></x-col>
+    <x-col span="4" offset="8"><div class="demoCol">4</div></x-col>
+</x-row>
+<x-row class="demoRow" gutter="10">
+    <x-col span="2"><div class="demoCol">2</div></x-col>
+    <x-col span="2" offset="2"><div class="demoCol">2</div></x-col>
+    <x-col span="2"><div class="demoCol">2</div></x-col>
+    <x-col span="2" offset="2"><div class="demoCol">2</div></x-col>
+    <x-col span="2"><div class="demoCol">2</div></x-col>
+    <x-col span="2" offset="2"><div class="demoCol">2</div></x-col>
+    <x-col span="2"><div class="demoCol">2</div></x-col>
+    <x-col span="2" offset="2"><div class="demoCol">2</div></x-col>
+</x-row>
+</x-row>
 ```

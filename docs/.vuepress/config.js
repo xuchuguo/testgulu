@@ -1,22 +1,15 @@
 
 module.exports = {
-    base:'官网/',
-    title: '指南',
+    base: '/testgulu/',
+    title: '轱辘',
     description: '一个易用的UI框架',
     themeConfig: {
         nav: [
-            {text: '主页', link: '/'},
-            {text: '主页', link: '/'},
-            {text: '主页', link: '/'}
+            { text: '主页', link: '/' },
+            { text: '文档', link: '/guide/' },
+            { text: '交流', link: 'https://google.com' },
         ],
         sidebar: [
-            {
-                title: '介绍',
-                collapsable: false,
-                children: [
-                    '/introduce/',
-                ]
-            },
             {
                 title: '入门',
                 collapsable: false,
@@ -34,9 +27,7 @@ module.exports = {
                     '/components/tabs',
                     '/components/grid',
                     '/components/layout',
-                    '/components/popover',
-                    '/components/collapse',
-                    '/components/toast'
+                    '/components/popover'
                 ]
             }
         ]

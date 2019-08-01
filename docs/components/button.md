@@ -17,7 +17,7 @@ title: Button 按钮
 #### 代码
 
 ``` html
-<x-button>默认按钮</x-button>
+<x-button>默认按钮</w-button>
 <x-button icon="settings">设置</x-button>
 <x-button icon="thumbs-up">点赞</x-button>
 <x-button icon="download" icon-position="right">下载</x-button>
