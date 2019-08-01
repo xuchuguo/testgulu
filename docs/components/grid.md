@@ -9,7 +9,6 @@ Grid - 网格，最多可分为24小格，可设置 gutter 和空白，默认支
 ```CSS
 * { box-sizing: border-box; }
 ```
-## 使用方法
 
 #### 浏览
 #
@@ -55,7 +54,7 @@ Grid - 网格，最多可分为24小格，可设置 gutter 和空白，默认支
 </x-row>
 </div>
 ```
-## 设置 gutter
+#### 设置 gutter
    
 #### 浏览
 #
@@ -77,7 +76,7 @@ Grid - 网格，最多可分为24小格，可设置 gutter 和空白，默认支
     <x-col span="6"><div class="demoCol">6</div></x-col>
 </x-row>
 ```
-## 设置空白
+#### 设置空白
    
 #### 浏览
 #

@@ -3,8 +3,6 @@ title: Input 输入框
 ---
 # 输入框
 
-## 常用例子
-
 #### 浏览
 #
 <ClientOnly>
